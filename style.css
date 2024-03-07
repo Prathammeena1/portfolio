@@ -1,0 +1,343 @@
+@font-face {
+    font-family: "P";
+    src: url(./font/PlayfairDisplay-Regular.9647c7fa\ \(4\).ttf);
+}
+
+@font-face {
+    font-family: "R";
+    src: url(./font/Roobert-Regular.286574d1.ttf);
+}
+
+:root{
+    --primaryColor:#ececec;
+    --whiteColor:#fff;
+    --secondaryColor:#141414
+}
+
+*::selection{
+    background-color: #3898ec;
+    color: var(--whiteColor);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "R";
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    width: 100%;
+    background-color: var(--secondaryColor);
+    position: relative;
+}
+
+#letsTalkSection{
+    background: rgba(255, 255, 255, 0.414);
+    backdrop-filter: blur(10px);
+}
+
+#contact{
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(5px);
+}
+
+
+
+
+#page1{
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0%;
+    background-color: #ececec;
+    overflow: visible;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 3vw;
+    text-transform: capitalize;
+    font-size: 2vw;
+    font-weight: 600;
+    letter-spacing: -.05vw;
+}
+
+#navL{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+#navL:hover{
+    color: #3898ec;
+    transition: all ease .5s
+    ;
+}
+
+.navImg{
+    height: 4.8vw;
+    width: 4.8vw;
+    border-radius: 99%;
+    overflow: hidden;
+    background: linear-gradient(to left,
+    rgba(144, 238, 144, 0.674), lightblue,rgba(252, 58, 255, 0.541));
+    padding: .2vw;
+}
+
+.navImg img{
+    border-radius: 99px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.outlineParent{
+    background: linear-gradient(to left,
+    rgba(144, 238, 144, 0.674), lightblue,rgba(252, 58, 255, 0.541));
+    padding: .2vw;
+}
+
+#navR{    
+    transition: all ease .3s;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.outlineChild{
+    background-color: var(--primaryColor);
+    padding: 1vw 2vw;
+}
+
+#navR p{
+    height: 100%;
+    width: 100%;
+    transition: all ease .3s;
+    border-radius: 50px;
+    display: flex;
+    gap: .5vw;
+    align-items: end;
+}
+#navR p>i{
+    position: relative;
+    transition: all ease .5s;
+}
+
+
+#navR:hover p{
+    background-color: transparent;
+    gap: 1.5vw;
+}
+
+
+
+
+#heroText{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+#heroText h1{
+    font-size: 9.5vw;
+    text-transform: capitalize;
+    width: 100%;
+    color: var(--secondaryColor);
+}
+
+
+#heroText2{
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+#heroText2 h2{
+    font-family: "montserrat";
+    font-size: 2vw;
+    width: 100%;
+}
+
+#page2{
+    height: fit-content;
+    width: 100%;
+    /* overflow: hidden; */
+    position: relative;
+    top: 0;
+    opacity: 0;
+    background-color: var(--secondaryColor) !important;
+    color: var(--whiteColor) !important;
+}
+
+#page2 .outlineChild{
+    background-color:var(--secondaryColor) ;
+}
+
+
+#page2HeroText{
+    text-align: center;
+}
+
+#page2HeroText h1{
+    font-size: 7.5vw;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+
+#page2Content{
+    padding: .5vw 2.5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#page2Content p{
+    font-size: 2.3vw;
+    font-weight: 550;
+
+}
+
+#page2L{
+    width: 45%;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+#page2LBox{
+    border-radius: 10px;
+}
+
+#page2LBox p{
+    padding: 1vw;
+}
+
+
+#page2R{
+    width: 45%;
+    position: relative;
+}
+
+.number{
+    color: var(--whiteColor);
+    -webkit-text-stroke-width: 0.2vw;
+    -webkit-text-stroke-color: black;
+    font-size: 5.75vw;
+    line-height: 1;
+    width: 3vw;
+}
+
+.cardBox1{
+    border-radius: 10px;
+    margin-bottom: 1vw;
+    position: relative;
+}
+
+
+.cardBox2{
+    display: flex;
+    gap: 1.5vw;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: var(--secondaryColor) !important;
+    color: var(--whiteColor) !important;
+}
+
+
+#projects{
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.project{
+    height: 10vw;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 2vw;
+    justify-content: space-between;
+    color: var(--whiteColor) !important;
+}
+
+.project h1{
+    font-size: 3vw;
+    text-transform: capitalize;
+    letter-spacing: -.1vw;
+    font-weight: 500;
+    font-family: "montserrat";
+}
+
+.projectImg{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 80%;
+}
+
+.viewProject{
+    font-size: 1.5vw;
+    text-transform: capitalize;
+    letter-spacing: -.1vw;
+    font-weight: 500;
+    font-family: "montserrat";
+    cursor:  pointer;
+    transition: all ease .5s;
+}
+.viewProject:hover{
+    border-bottom: 1px solid #3898ec;
+    color: #3898ec;
+}
+
+.movercirc{
+    border-radius: 0px !important;
+}
+.project a{
+    text-decoration: none;
+    color: var(--whiteColor);
+}
+
+#page3 .outlineChild{
+    background-color:var(--secondaryColor) !important;
+}
+
+#page3 .outlineParent:nth-child(1){
+    background: linear-gradient(to left,
+    rgba(144, 238, 144, 0.674), lightblue,rgba(252, 58, 255, 0.541));
+    padding: .2vw 0;
+}
+
+#page3 .outlineParent{
+    background: linear-gradient(to left,
+    rgba(144, 238, 144, 0.674), lightblue,rgba(252, 58, 255, 0.541));
+    padding: 0;
+    padding-bottom: .2vw;
+}
