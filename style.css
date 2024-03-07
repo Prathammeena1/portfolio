@@ -8,11 +8,6 @@
     src: url(./font/Roobert-Regular.286574d1.ttf);
 }
 
-@font-face {
-    font-family: "montserrat";
-    src: url(./font/Montserrat-VariableFont_wght.ttf);
-}
-
 :root{
     --primaryColor:#ececec;
     --whiteColor:#fff;
@@ -176,7 +171,6 @@ img{
 }
 
 #heroText2 h2{
-    font-family: "montserrat";
     font-size: 2vw;
     width: 100%;
 }
@@ -298,7 +292,6 @@ img{
     text-transform: capitalize;
     letter-spacing: -.1vw;
     font-weight: 500;
-    font-family: "montserrat";
 }
 
 .projectImg{
@@ -313,7 +306,6 @@ img{
     text-transform: capitalize;
     letter-spacing: -.1vw;
     font-weight: 500;
-    font-family: "montserrat";
     cursor:  pointer;
     transition: all ease .5s;
 }
