@@ -8,6 +8,11 @@
     src: url(./font/Roobert-Regular.286574d1.ttf);
 }
 
+@font-face {
+    font-family: "montserrat";
+    src: url(./font/Montserrat-VariableFont_wght.ttf);
+}
+
 :root{
     --primaryColor:#ececec;
     --whiteColor:#fff;
