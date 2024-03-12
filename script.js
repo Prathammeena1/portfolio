@@ -36,7 +36,7 @@ loco();
 
 
 Shery.hoverWithMediaCircle(".project", {
-    images: ['./img/ames.png','./img/Neverland - Brave 13-12-2023 12.36.06 PM.png','./img/Mini Whatsapp - Brave 06-03-2024 3.42.49 PM.png']
+    images: ['./img/ames.png','./img/Neverland - Brave 13-12-2023 12.36.06 PM.png','./img/Mini Whatsapp - Brave 06-03-2024 3.42.49 PM.png','./img/insta.png']
 });
 
 Shery.makeMagnet(".viewProject" /* Element to target.*/, {
@@ -57,8 +57,11 @@ page1TL.to('#nav ,#heroText2',{
     opacity:0,
 },'anime1')
 .to('#heroText h1',{
-    scale:100,
-    width:"550%"
+    scale:150,
+    width:"980%"
+},'anime1')
+.to("#page1",{
+    backgroundColor:'#141414'
 },'anime1')
 .to('#page1',{
     zIndex:-10
@@ -66,6 +69,7 @@ page1TL.to('#nav ,#heroText2',{
 .to('#page2',{
     opacity:1,
 },)
+
 
 
 var page2TL = gsap.timeline({
