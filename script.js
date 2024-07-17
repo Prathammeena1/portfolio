@@ -33,15 +33,6 @@ function loco(){
 loco();
 
 
-
-
-Shery.hoverWithMediaCircle(".project", {
-    images: ['./img/ames.png','./img/Neverland - Brave 13-12-2023 12.36.06 PM.png','./img/Mini Whatsapp - Brave 06-03-2024 3.42.49 PM.png','./img/insta.png']
-});
-
-Shery.makeMagnet(".viewProject" /* Element to target.*/, {
-    duration: .1,
-});
 var page1TL = gsap.timeline({
     scrollTrigger:{
         scroller:"#main",
@@ -127,3 +118,77 @@ document.querySelector('.close').addEventListener('click',function(){
         }
     })
 })
+
+
+
+
+function Issues(){
+    var oldPosition;
+var newPosition;
+var isMouseInside = false;
+
+function selectNearestValue(min, middle, max, value) {
+  const values = [min, middle, max];
+  values.sort((a, b) => a - b);
+  let nearestValue = values[0];
+  let minDiff = Math.abs(value - values[0]);
+
+  for (let i = 1; i < values.length; i++) {
+    const diff = Math.abs(value - values[i]);
+    if (diff < minDiff) {
+      minDiff = diff;
+      nearestValue = values[i];
+    }
+  }
+  return nearestValue;
+}
+
+document.querySelectorAll(".overlay").forEach((e) => {
+  const issueElem = e.querySelector(".imgBg");
+  issueElem.style.pointerEvents = "none"; // Disable pointer events on the image
+
+  e.addEventListener("mouseenter", () => {
+    isMouseInside = true;
+  });
+
+  e.addEventListener("mousemove", (dets) => {
+    if (isMouseInside) {
+      newPosition = dets.clientX - e.getBoundingClientRect().left;
+      if (!oldPosition) {
+        oldPosition = newPosition;
+      }
+
+      let differnce = newPosition - oldPosition;
+      const rotate = gsap.utils.clamp(-10, 10, differnce);
+      var scale = Math.abs(selectNearestValue(-1.5, 1.5, 1.5, rotate));
+
+
+      gsap.to(`#${e.id} .imgBg`, {
+        opacity: 1,
+        scale: scale,
+        rotate: `${-rotate}deg`,
+        ease: "back.out",
+        duration: 0.8,
+        left: dets.clientX - e.getBoundingClientRect().left + "px",
+        top: dets.clientY - e.getBoundingClientRect().top + "px",
+      });
+
+      setTimeout(() => {
+        oldPosition = dets.clientX - e.getBoundingClientRect().left;
+      }, 30);
+    }
+  }, true);
+
+  e.addEventListener("mouseleave", (dets) => {
+    isMouseInside = false;
+    gsap.to(`#${e.id} .imgBg`, {
+      opacity: 0,
+      scale: 0,
+      duration: 0.8,
+    });
+  });
+});
+
+}
+
+Issues()
